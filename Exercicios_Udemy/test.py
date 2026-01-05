@@ -1,9 +1,11 @@
-def criar_saudacao(saudacao):
-    def saudar(nome):
-        return f'{saudacao}, {nome}'
-    return saudar
+pessoa = {
+    'name': 'Rafael',
+    'nacionalidade': 'Brasileiro',
+    'UF': 'SP',
+    'idade': 20
+}
 
-s1 = criar_saudacao('Bom dia')
-s2 = criar_saudacao('Boa noite')
-
-print(s1('Luiz'))
+if pessoa.get('idade') is None:
+    print('Não existe a chave idade')
+else:
+    print(pessoa['idade'])
