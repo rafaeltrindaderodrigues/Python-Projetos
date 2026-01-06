@@ -21,32 +21,58 @@ perguntas = [
     },
 ]
 
-acertos = 0
+count = 0
 
-for valores in perguntas:
-    os.system('clear')
-    print(f'\n{valores['Pergunta']}: ')
-
-    print('\nOpções')
-    quantidade_respostas = len(valores['Opções'])
-
-    for i, opcao in enumerate(valores['Opções']):
-        print(f'{i}) {opcao}')
-
-    resposta = input('\nEscolha uma opção: ')
-
-    if resposta not in valores['Opções']:
-        print('O valor que você digitou não está entre as opções')
-        time.sleep(1.5)
-        
-        
-    if resposta == valores['Resposta']:
-        print('Você acertou, parabéns 🔥')
-        acertos += 1
-        time.sleep(1.5)
+def condicionais(i, resposta_user):
+    if i == 0:
+        if resposta_user == '3':
+            print('Você acertou')
+            count += 1
+            time.sleep(2)
+        else: 
+            print('Você errou')
+            time.sleep(2)
     
-    else: 
-        print('Você errou ❌')
-        time.sleep(1.5)
+    elif i == 1:
+        if resposta_user == '1':
+            print('Você acertou')
+            count += 1
+            time.sleep(2)
+        else: 
+            print('Você errou')
+            time.sleep(2)
 
-print(f'\nVocê teve {acertos} acertos')
+    elif i == 2:
+        if resposta_user == '2':
+            print('Você acertou')
+            count += 1
+            time.sleep(2)
+        else: 
+            print('Você errou')
+            time.sleep(2)
+
+for i, pergunta in enumerate(perguntas):
+    
+    # salvar cada key em perguntas dentro de uma variável
+    Pergunta = pergunta['Pergunta']
+    opcoes = pergunta['Opções']
+    resposta = pergunta['Resposta']
+
+    # fazer as perguntas para o usuário e mostrando as opções
+    os.system('clear')
+    print(f'\n{i + 1}) {Pergunta}\n')
+    
+
+    # para mostrar as opções, preciso acessar o array/lista que está dentro da variável
+    for index, opcao in enumerate(opcoes):
+        print(f'{index + 1}) {opcao}')
+
+    # preciso pegar a resposta dele agora
+    resposta_user = input('\nEscolha uma opção: ')
+
+    condicionais(i, resposta_user)
+
+os.system('clear')
+print(f'\nVocê acertou {count}')
+
+

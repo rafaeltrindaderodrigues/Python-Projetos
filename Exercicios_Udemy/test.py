@@ -1,11 +1,6 @@
-pessoa = {
-    'name': 'Rafael',
-    'nacionalidade': 'Brasileiro',
-    'UF': 'SP',
-    'idade': 20
-}
+d = {}
 
-if pessoa.get('idade') is None:
-    print('Não existe a chave idade')
-else:
-    print(pessoa['idade'])
+for letra in 'abracadabra':
+    d[letra] = d.get(letra, 0) + 1
+
+print(d)
