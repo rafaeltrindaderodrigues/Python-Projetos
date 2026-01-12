@@ -1,6 +1,13 @@
-d = {}
+class Pessoa:
+    def __init__(self, nome: str, idade: int):
+        self.nome = nome
+        self.idade = idade
+    
+    def __str__(self):
+        return f'Olá, meu nome é {self.nome} e tenho {self.idade}'
+    
 
-for letra in 'abracadabra':
-    d[letra] = d.get(letra, 0) + 1
+pessoa1 = Pessoa('Rafael', 18)
 
-print(d)
+print(pessoa1)
+                                                            
