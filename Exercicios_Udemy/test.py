@@ -1,13 +1,12 @@
-class Pessoa:
-    def __init__(self, nome: str, idade: int):
-        self.nome = nome
-        self.idade = idade
-    
-    def __str__(self):
-        return f'Olá, meu nome é {self.nome} e tenho {self.idade}'
-    
+def gen1(n=0):
+    yield 1
+    print('Continua')
+    yield 2
+    print('para')
+    yield 3
 
-pessoa1 = Pessoa('Rafael', 18)
+gen = iter(gen1())
 
-print(pessoa1)
-                                                            
+print(next(gen))                                                            
+print(next(gen))                                                            
+print(next(gen))                                                            
