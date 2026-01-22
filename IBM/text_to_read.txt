@@ -1,0 +1,2 @@
+I have this text. Let me see if I can read this into our program in python.
+Ok, idk what to do now

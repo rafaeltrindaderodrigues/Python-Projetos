@@ -1,0 +1,18 @@
+Habilidades aprendidas no curso da coursera de python:
+- Numpy
+- Programming Principles
+- Python Programming
+- File I/O
+- Pandas
+- Computer Programming
+- Restful API
+- Data Manipulation
+- Data Import/Export
+- Object Oriented Programming (OOP)
+- JSON
+- Data Analysis
+- Web Scraping
+- Category: Data Structures
+- Jupyter
+- Automation
+- Application Programming Interface (API)
